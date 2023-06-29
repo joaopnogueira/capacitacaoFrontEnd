@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif; 
+    background-color: #FFF;
+    color: #FFF;
+}
+
+.sidebar{
+    background-color: #343842;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 348px;
+    height: 100%;
+    padding: 20px 10px 20px 10px;
+    transition: all 0.35s;
+}
+
+.sidebar_header{
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.logo_img{ 
+    width: 150px;
+    min-height: 150px;
+    border-radius: 3px;
+    margin-left: 90px;
+    transition: all 0.35s;
+}
+
+.sidebar button{
+    height: 64px;
+    background: transparent;
+    border: 0;
+    font-family: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+}
+
+.sidebar button > span{
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    height: 48px;
+    padding: 0 16px 0 12px;
+    border-radius: 20px;
+    line-height: 1;
+    transition: all 0.4px;
+}
+
+.sidebar button:hover > span {
+    background: rgba(23, 147, 166, 1);
+}
+
+.sidebar button i {
+    position: relative;
+    font-size: 28px;
+    transition: 0.2s;
+}
+
+.sidebar button span{
+    font-size: 20px;
+}
+
+.sidebar > nav {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.sidebar > div {
+    margin-left: 16px;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+@media (width < 820px){
+    .sidebar{
+        width: 72px;
+    }
+    .sidebar button > span{
+        width: 50px;
+    }
+    .sidebar button > span > span{
+        opacity: 0;
+        visibility: hidden;
+    }
+    .sidebar header > img{
+        width: 50px;
+        min-height: 50px;
+        margin-left: 0px;
+    }
+    .sidebar div{
+        font-size: 10px;
+        margin-left: 0px;
+    }
+}
